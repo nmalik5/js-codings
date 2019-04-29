@@ -16,3 +16,4 @@ console.log(p1);
 
 console.log('This should exec before promise');
 
+
