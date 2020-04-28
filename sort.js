@@ -29,9 +29,7 @@ const QSPartition = (arr, startIndex, endIndex) => {
         if (arr[i] <= pivot) {
             let a = arr[i];
             let b = arr[pIndex];
-            a = a ^ b;
-            b = a ^ b;
-            a = a ^ b;
+            [a, b] = [b, a]
             arr[i] = a;
             arr[pIndex] = b;
             pIndex++;
@@ -40,9 +38,7 @@ const QSPartition = (arr, startIndex, endIndex) => {
 
     let a1 = arr[pIndex];
     let b1 = arr[endIndex];
-    a1 = a1 ^ b1;
-    b1 = a1 ^ b1;
-    a1 = a1 ^ b1;
+    [a1, b1] = [b1, a1];
     arr[pIndex] = a1;
     arr[endIndex] = b1;
 
